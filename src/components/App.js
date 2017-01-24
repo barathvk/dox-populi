@@ -1,4 +1,5 @@
 import { inject, observer } from 'mobx-react'
+import Edit from './Edit'
 @inject('store') @observer
 export default class App extends React.Component {
   constructor(props) {
@@ -6,10 +7,9 @@ export default class App extends React.Component {
     this.state = {}
   }
   render() {
-    const store = this.props.store
     return (
-      <div>
-        <h1>{store.message}</h1>
+      <div className='fill flex-column'>
+        <Edit/>
       </div>
     )
   }
